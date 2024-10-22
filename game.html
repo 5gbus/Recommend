@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Tips & RTP</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link ke CSS gabungan -->
 </head>
 <body>
     <!-- Header -->
@@ -24,7 +24,9 @@
                 <p>Tip: Always split aces and 8s. Keep the dealer's hand in mind.</p>
                 <div class="rtp">
                     <label>RTP: </label>
-                    <div class="rtp-bar" data-rtp="0"></div>
+                    <div class="rtp-bar" data-rtp="0">
+                        <span class="rtp-text">0%</span>
+                    </div>
                 </div>
             </div>
             <div class="game-item">
@@ -32,7 +34,9 @@
                 <p>Tip: Try European Roulette for better odds.</p>
                 <div class="rtp">
                     <label>RTP: </label>
-                    <div class="rtp-bar" data-rtp="0"></div>
+                    <div class="rtp-bar" data-rtp="0">
+                        <span class="rtp-text">0%</span>
+                    </div>
                 </div>
             </div>
             <div class="game-item">
@@ -40,7 +44,9 @@
                 <p>Tip: Look for slots with high RTP and play maximum paylines.</p>
                 <div class="rtp">
                     <label>RTP: </label>
-                    <div class="rtp-bar" data-rtp="0"></div>
+                    <div class="rtp-bar" data-rtp="0">
+                        <span class="rtp-text">0%</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -53,5 +59,27 @@
     </nav>
 
     <script src="script.js"></script>
+    <script>
+        // Fungsi untuk navigasi
+        function navigateTo(page) {
+            window.location.href = page; // Ganti halaman dengan URL yang diberikan
+        }
+
+        // RTP animation
+        document.addEventListener("DOMContentLoaded", function () {
+            const rtpBars = document.querySelectorAll('.rtp-bar');
+
+            rtpBars.forEach(bar => {
+                // Menghasilkan RTP acak antara 80 hingga 100
+                const rtpPercentage = Math.floor(Math.random() * (100 - 80 + 1)) + 80;
+                bar.style.width = rtpPercentage + '%';
+                bar.setAttribute('data-rtp', rtpPercentage); // Update data-rtp attribute
+                
+                // Menampilkan persentase di dalam bar
+                const rtpText = bar.querySelector('.rtp-text');
+                rtpText.textContent = rtpPercentage + '%'; // Update teks
+            });
+        });
+    </script>
 </body>
 </html>
