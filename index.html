@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Casino Recommendations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <h1>Online Casino Recommendations</h1>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to the Best Online Casino</h1>
+        <p>Find the best games and tips for winning big!</p>
+        <button class="cta-btn">Start Now</button>
+    </section>
+
+    <!-- Recommendations Section -->
+    <section class="recommendations">
+        <h2>Recommended Casinos</h2>
+        <div class="casino-cards">
+            <div class="casino-card">
+                <img src="casino1.jpg" alt="Casino 1">
+                <h3>Casino 1</h3>
+                <p>100% bonus up to $500</p>
+                <a href="#" class="casino-link">Play Now</a>
+            </div>
+            <div class="casino-card">
+                <img src="casino2.jpg" alt="Casino 2">
+                <h3>Casino 2</h3>
+                <p>150 free spins on sign-up</p>
+                <a href="#" class="casino-link">Play Now</a>
+            </div>
+            <div class="casino-card">
+                <img src="casino3.jpg" alt="Casino 3">
+                <h3>Casino 3</h3>
+                <p>50% cashback on losses</p>
+                <a href="#" class="casino-link">Play Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Section -->
+    <section class="game" id="game">
+        <h2>Game Tips & RTP</h2>
+        <div class="game-list">
+            <div class="game-item">
+                <h3>Game 1: Blackjack</h3>
+                <p>Tip: Always split aces and 8s. Keep the dealer's hand in mind.</p>
+                <div class="rtp">
+                    <label>RTP: </label>
+                    <div class="rtp-bar" id="rtp1" data-rtp="95"></div>
+                </div>
+            </div>
+            <div class="game-item">
+                <h3>Game 2: Roulette</h3>
+                <p>Tip: Try European Roulette for better odds.</p>
+                <div class="rtp">
+                    <label>RTP: </label>
+                    <div class="rtp-bar" id="rtp2" data-rtp="97"></div>
+                </div>
+            </div>
+            <div class="game-item">
+                <h3>Game 3: Slots</h3>
+                <p>Tip: Look for slots with high RTP and play maximum paylines.</p>
+                <div class="rtp">
+                    <label>RTP: </label>
+                    <div class="rtp-bar" id="rtp3" data-rtp="92"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky Bottom Navigation -->
+    <nav class="bottom-nav">
+        <button class="nav-btn" onclick="navigateTo('home')">Home</button>
+        <button class="nav-btn" onclick="navigateTo('game')">Game</button>
+    </nav>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
