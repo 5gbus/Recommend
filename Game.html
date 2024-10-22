@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Tips & RTP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <h1>Game Tips & RTP</h1>
+    </header>
+
+    <!-- Game Section -->
+    <section class="game">
+        <h2>Game Tips & RTP</h2>
+        <div class="game-list">
+            <div class="game-item">
+                <h3>Game 1: Blackjack</h3>
+                <p>Tip: Always split aces and 8s. Keep the dealer's hand in mind.</p>
+                <div class="rtp">
+                    <label>RTP: </label>
+                    <div class="rtp-bar" data-rtp="0"></div>
+                </div>
+            </div>
+            <div class="game-item">
+                <h3>Game 2: Roulette</h3>
+                <p>Tip: Try European Roulette for better odds.</p>
+                <div class="rtp">
+                    <label>RTP: </label>
+                    <div class="rtp-bar" data-rtp="0"></div>
+                </div>
+            </div>
+            <div class="game-item">
+                <h3>Game 3: Slots</h3>
+                <p>Tip: Look for slots with high RTP and play maximum paylines.</p>
+                <div class="rtp">
+                    <label>RTP: </label>
+                    <div class="rtp-bar" data-rtp="0"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky Bottom Navigation -->
+    <nav class="bottom-nav">
+        <button class="nav-btn" onclick="navigateTo('index.html')">Home</button>
+        <button class="nav-btn" onclick="navigateTo('game.html')">Game</button>
+    </nav>
+
+    <script src="script.js"></script>
+    <script>
+        // RTP animation
+        document.addEventListener("DOMContentLoaded", function () {
+            const rtpBars = document.querySelectorAll('.rtp-bar');
+
+            rtpBars.forEach(bar => {
+                // Menghasilkan RTP acak antara 80 hingga 100
+                const rtpPercentage = Math.floor(Math.random() * (100 - 80 + 1)) + 80;
+                bar.style.width = rtpPercentage + '%';
+                bar.setAttribute('data-rtp', rtpPercentage); // Update data-rtp attribute
+            });
+        });
+    </script>
+</body>
+</html>
