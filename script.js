@@ -8,10 +8,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Navigation function
-function navigateTo(sectionId) {
-    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+// Fungsi untuk navigasi
+function navigateTo(page) {
+    window.location.href = page; // Ganti halaman dengan URL yang diberikan
 }
+
 
 // RTP animation
 document.addEventListener("DOMContentLoaded", function () {
